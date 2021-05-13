@@ -1,5 +1,5 @@
 function imprimir (){
-    let esVacio = false;
+    let espacioVacio = false;
     
     let name = document.getElementById("userName").value;
     let surname = document.getElementById("UserSurname").value;
@@ -13,17 +13,17 @@ function imprimir (){
     console.log(formulario);
     for (let i = 0; i < formulario.length; i++) {
         if (formulario[i] === "") {
-            esVacio = true;
+            espacioVacio = true;
         }
     }
-    if (esVacio === true) {
+    if (espacioVacio === true) {
         alert("Por favor llene los campos")
     }
 
-    if (age >= 18 && esVacio === false){
+    if (age >= 18 && espacioVacio === false){
         alert(`Hola ${name} ${surname}, has aplicado correctamente, te contactaremos en ${email}`)
     }
-    else if (age < 18 && esVacio === false){
+    else if (age < 18 && espacioVacio === false){
         alert(`Hola ${name} ${surname}, no cumples con la edad requerida`)
     }
 
